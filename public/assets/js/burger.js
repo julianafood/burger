@@ -1,15 +1,15 @@
 $(function() {
     $(".change-enjoyed").on("click", function(event) {
       var id = $(this).data("id");
-      var newBurger = $(this).data("newenjoyed");
+      var newEnjoyed = $(this).data("newenjoyed");
   
-      var newBurgerState = {
-        burger: newBurger
+      var newEnjoyedState = {
+        burger: newEnjoyed
       };
   
       $.ajax("/api/burger/" + id, {
         type: "PUT",
-        data: newBurgerItem
+        data: newEnjoyedState
       }).then(
         function() {
           console.log("changed burger to", newBurger);
@@ -23,9 +23,9 @@ $(function() {
       
       event.preventDefault();
   
-      var newCat = {
-        name: $("#ca").val().trim(),
-        sleepy: $("[name=burger]:checked").val().trim()
+      var newBurger = {
+        burger_name: $("#ca").val().trim(),
+        enjoyed: $("[name=hungry]:checked").val().trim()
       };
   
       $.ajax("/api/burger", {

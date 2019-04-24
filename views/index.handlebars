@@ -3,18 +3,19 @@
 <h2>Burgers that must be enjoyed!</h2>
 
 <ul>
-  {{#each burger}}
+  {{#each burgers}}
     {{#unless enjoyed}}
-      {{> burger/burger-block eaten=true}}
+      {{> burgers/burger-block enjoy=true}}
     {{/unless}}
   {{/each}}
 </ul>
+
 <h2>Burgers that are enjoyed!</h2>
 
 <ul>
-  {{#each burger}}
+  {{#each burgers}}
     {{#if enjoyed}}
-      {{> burgers/burger-block sleep=false}}
+      {{> burgers/burger-block enjoy=false}}
     {{/if}}
   {{/each}}
 </ul>
