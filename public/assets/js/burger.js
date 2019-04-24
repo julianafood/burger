@@ -1,13 +1,13 @@
 $(function() {
-    $(".change-burger").on("click", function(event) {
+    $(".change-enjoyed").on("click", function(event) {
       var id = $(this).data("id");
-      var newBurger = $(this).data("newsleep");
+      var newBurger = $(this).data("newenjoyed");
   
       var newBurgerState = {
         burger: newBurger
       };
   
-      $.ajax("/api/cats/" + id, {
+      $.ajax("/api/burger/" + id, {
         type: "PUT",
         data: newBurgerItem
       }).then(
@@ -30,7 +30,7 @@ $(function() {
   
       $.ajax("/api/burger", {
         type: "POST",
-        data: newCat
+        data: newBurger
       }).then(
         function() {
           console.log("created new burger");
@@ -40,14 +40,14 @@ $(function() {
       );
     });
   
-    $(".delete-cat").on("click", function(event) {
+    $(".delete-burger").on("click", function(event) {
       var id = $(this).data("id");
   
-      $.ajax("/api/cats/" + id, {
+      $.ajax("/api/burger/" + id, {
         type: "DELETE"
       }).then(
         function() {
-          console.log("deleted cat", id);
+          console.log("deleted burger", id);
            
           location.reload();
         }
