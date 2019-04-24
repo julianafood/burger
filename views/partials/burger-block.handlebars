@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>Eat the butrger!</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-	   
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
-</html>
+<li>
+	{{name}}
+
+	<button class="change-enjoyed" data-id="{{id}}" data-newburger="{{enjoyed}}">
+		{{#if sleep}}Eat Time!{{else}}Enjoy!{{/if}}
+	</button>
+
+	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+</li>
+
