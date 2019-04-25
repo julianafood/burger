@@ -4,10 +4,8 @@
     "password": "jln42l450w4ii3na",
     "database": "burgers_db",
     "host": "tkck4yllxdrw0bhi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql",
-
+    "dialect": "mysql"
   },
-
   "name": "burger",
   "version": "1.0.0",
   "description": "",
